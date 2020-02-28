@@ -1,0 +1,10 @@
+韩昊 2019102935
+专业：计算机技术
+导师：王建中	
+方向:目标检测
+定义：识别图片中有哪些物体以及物体的位置（坐标位置）
+应用：
+1.Python 使用Opencv实现目标检测与识别
+2.python 使用tensorflow实现目标检测与识别
+3.R-CNN系列，包括R-CNN，Fast R-CNN，以及Faster R-CNN
+python 学习目标：熟练使用 python 语言进行深度学习方向的研究
