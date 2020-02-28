@@ -1,0 +1,41 @@
+专业：计算机技术
+研究方向：其实我也不太确定是进公司还是去当我本科院校的老师，之所以不确定是因为我是相当于跨专业，基础差，又是女生年纪又大了，等毕业去公司感觉脑子不够用，而去我本科院校当老师呢，又需要博士学历，我怕我博士毕不了业，而且年纪也大了，博士毕业都要奔4的人了，所以我也好纠结，我当下还是先好好学习编程，无论走那条路，编程还是要会的。
+Python想学到会编程，能刷几道杭电的编程题就可以了，因为我基础差，其他语言还没有搞好，这门课也不期望太高，量力而行吧！
+
+
+例举python在各个领域的成功案例和主要的开发工具
+
+1.Web开发
+比如Django和flask，豆瓣。
+2.网络爬虫
+
+Python自带的urllib库，第三方的requests库和Scrappy框架让开发爬虫变得非常容易。
+
+3.计算与数据分析
+
+python不仅支持各种数学运算，还可以绘制高质量的2D和3D图像。
+
+4.人工智能
+神经网络框架如Facebook的PyTorch和Google的TensorFlow都采用了Python语言。
+
+5.自动化运维
+
+大多数Linux发行版和MacOSX都集成了Python，可以在终端下直接运行Python。
+
+6.云计算
+
+构建云计算的平台的IasS服务的OpenStack就是采用Python的，云计算的其他服务也都是在IasS服务之上的。
+　
+7.网络编程
+
+大规模软件开发计划例如Zope，Mnet, BitTorrent和Google都在广泛地使用它。
+
+8.游戏开发
+Python支持更多的特性和数据类型。Python的PyGame库也可用于直接开发一些简单游戏，比如贪吃蛇。
+
+9.图形GUI 
+PyQT, WxPython,TkInter。
+10.金融 
+量化，金融分析。
+
+python主要的开发工具：Visual Studio 的 Python 开发插件 PTVS、集成开发环境 Eclipse、PyCharm、IPython。
