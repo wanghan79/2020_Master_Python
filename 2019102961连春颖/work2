@@ -1,0 +1,23 @@
+#encoding=utf-8
+from collections import namedtuple
+
+Name = namedtuple('Name',['surName','nickName'])
+name1 =Name(surName='大张',nickName='小张')
+name2 =Name(surName='大颖',nickName='小颖')
+name3 =Name(surName='大王',nickName='小王')
+Birth =namedtuple('Birth',['wcalender','ccalender'])
+birth1 =Birth(wcalender='19951207',ccalender='19951016')
+birth2 =Birth(wcalender='19951125',ccalender='19951004')
+birth3 =Birth(wcalender='19981125',ccalender='19981004')
+Sex = namedtuple('Sex','sex')
+sex1 =Sex(sex='男')
+sex2 =Sex(sex='女')
+sex3 =Sex(sex='男')
+User =namedtuple('User',['Name','Birth','Sex'])
+user1 = User((name1.surName,name1.nickName),(birth1.ccalender,birth1.wcalender),sex1)
+user2 = User((name2.surName,name2.nickName),(birth2.ccalender,birth2.wcalender),sex2)
+user3 = User((name3.surName,name3.nickName),(birth3.ccalender,birth3.wcalender),sex3)
+user =(user1,user2,user3)
+
+for i in user:
+    print(f"surName:{i.Name[0]},nickName:{i.Name[1]},性别：{i.Sex}+ccalender:{i.Birth[0]},wcalender:{i.Birth[1]}")
