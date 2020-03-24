@@ -1,0 +1,30 @@
+from collections import namedtuple
+
+User = namedtuple('User',['name','sex','birth'])
+
+class name:
+
+    def __init__(self,surName,nickName):
+        self.surName=surName
+        self.nickName=nickName
+
+class birth:
+
+    def __init__(self,wcalendar,ccalendar):
+        self.wcalendar=wcalendar
+        self.ccalendar=ccalendar
+
+users = [
+    (name('罗杨美慧','美慧'),'女',birth('19970820','19970718')),
+    (name('张三','three'),'男',birth('19990101','19990101')),
+    (name('李四','four'),'男',birth('19990101','19990101'))
+]
+
+for user in users:
+    user = User._make(user)
+    
+    print(user.name.surName)
+    print(user.name.nickName)
+    print(user.sex)
+    print(user.birth.wcalendar)
+    print(user.birth.ccalendar)
