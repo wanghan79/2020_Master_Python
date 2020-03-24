@@ -23,8 +23,8 @@ users = [
 for user in users:
     user = User._make(user)
     
-    print(user.name.surName)
-    print(user.name.nickName)
-    print(user.sex)
-    print(user.birth.wcalendar)
-    print(user.birth.ccalendar)
+    print('大名叫：{}'.format(user.name.surName))
+    print('{}的小名叫：{}'.format(user.name.surName,user.name.nickName))
+    print('{}的年龄是：{}'.format(user.name.nickName,user.sex))
+    print('{}的阳历生日是：{}'.format(user.name.nickName,user.birth.wcalendar))
+    print('{}的阴历生日是：{}'.format(user.name.nickName,user.birth.ccalendar))
