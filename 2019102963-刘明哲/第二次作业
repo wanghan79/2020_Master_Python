@@ -1,0 +1,25 @@
+import collections
+
+User = collections.namedtuple("User","Name Birthday sex")
+Name = collections.namedtuple("Name","surName nickName")
+Birthday = collections.namedtuple("Birthday","wcalender ccalender")
+
+
+person_1 = User(Name('刘','明哲') , Birthday('1','2') , '男')
+person_2 = User(Name('水','箭龟') , Birthday('15','32') , '男')
+person_3 = User(Name('梦','幻') , Birthday('51','23') , '女')
+Userlist = [person_1,person_2,person_3]
+
+print(User)
+
+for i in Userlist:
+    print("------------")
+    print("姓",format(i.Name.surName))
+    print("名",format(i.Name.nickName))
+    print("姓名",format(i.Name))
+    print("公历生日",format(i.Birthday.wcalender))
+    print("农历生日", format(i.Birthday.ccalender))
+    print("生日", format(i.Birthday))
+    print("性别", format(i.sex))
+    print("-------------")
+
