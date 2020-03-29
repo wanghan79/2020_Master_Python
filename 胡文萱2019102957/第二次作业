@@ -1,0 +1,24 @@
+from collections import namedtuple
+Name = namedtuple('Name',["surName","nickName"])
+Birth = namedtuple('birth',['wcalender','ccalender'])
+User = namedtuple('User',[ "name" ,"sex","birth"]) # 第一个元素类名，第二个元素
+
+name1 = Name("Huwenxuan","Hutong")
+birth1 = Birth("0202","0320")
+user1 = User(name1,"female",birth1)
+
+name2 = Name("Huaijia","xiaobao")
+birth2 = Birth("1220","0208")
+user2 = User(name2,"female",birth2)
+
+name3= Name("Chuyang","huashengmi")
+birth3 = Birth("1201","0214")
+user3 = User(name3,"male",birth3)
+
+users=[user1,user2,user3]
+for user in users:
+    print(user)
+
+print(user1.name.surName)
+print(user2.birth.wcalender)
+print(user3.sex)
