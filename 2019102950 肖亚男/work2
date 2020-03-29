@@ -1,0 +1,14 @@
+from collections import namedtuple
+
+Name = namedtuple('Name', ['surName', 'nickName'])
+Birth = namedtuple('Birth', ['wCalender', 'cCalender'])
+User = namedtuple('User', ['name', 'sex', 'birth'])
+
+for i in range(1, 4):
+    name = Name('Liu', i)
+    birth = Birth('0513', '0322')
+    user = User(name=name, sex='male', birth=birth)
+    print(user.name.surName)
+    print(user.name.nickName)
+    print(user.birth.wCalender)
+    print(user.birth.cCalender)
