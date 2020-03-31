@@ -27,6 +27,6 @@ def Select(set1):
                 print(i,end=',')
 
 if __name__=='__main__':
-    fin=Add(100,100)
+    fin=Add(1000,1000)
     Select(fin)
 
