@@ -24,7 +24,7 @@ def random_string():     #生成1000个随机字符串,由[a-zA-Z]组成,并加�
     for i in range(lenOfStr):
         letter_len = random.randint(0, 10) #随机获取字符串长度 字符串长度0-10
         str = ''
-        for i in range(letter_len):
+        for j in range(letter_len):
             index = random.randint(0,  l)
             str += letters[index]
         contents.add(str)
