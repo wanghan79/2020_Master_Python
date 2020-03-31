@@ -8,20 +8,21 @@ import random
 
 lenOfNum = 1000
 lenOfStr = 1000
+num_range = 100
 contents = set()
 letters = []
 def randow_num():               #生成1000个随机数,并加入set
     global contents
-    for i in range(1000):
-        num = random.uniform(0, 100)
+    for i in range(lenOfNum):
+        num = random.uniform(0, num_range)
         contents.add(round(num, 2))
 
 def random_string():     #生成1000个随机字符串,由[a-zA-Z]组成,并加入set
     global letters
     global contents
     l = len(letters) - 1
-    for i in range(1000):
-        letter_len = random.randint(0, 10)
+    for i in range(lenOfStr):
+        letter_len = random.randint(0, 10) #随机获取字符串长度 字符串长度0-10
         str = ''
         for i in range(letter_len):
             index = random.randint(0,  l)
