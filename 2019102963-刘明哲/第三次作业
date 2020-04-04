@@ -1,0 +1,24 @@
+import random
+def ranNumber(x):
+    a = [random.uniform(0,x) for i in range(1000)]
+    d = set(a)
+    print(a)
+    for m in a:
+        if (m>=20) and (m<=50):
+            print(m)
+
+def ranString(y):
+    e = set()
+    for i in range(y):
+        b = ''
+        for j in range(3):  #3个字符
+            b = b + random.choice('abcdefghijklmnopqrstuvwxyz')
+        e.add(b)
+    for i in e:
+        if 'at' in i:
+            print(i)
+    return e
+
+if __name__=='__main__':
+    ranNumber(100)
+    ranString(1000)
