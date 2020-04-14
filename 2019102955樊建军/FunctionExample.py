@@ -77,6 +77,7 @@ if __name__ == "__main__":
     result = dataSampling(int, (1,100), 10) | dataSampling(str, "aasbhjcuyewbasdlapoqmalzeropf", 10, 5)
     print("Before Set : " )
     print(result)
+
     re = dataScreening(result, (0,50,"a"))
     print("After Set : ")
     print(re)
