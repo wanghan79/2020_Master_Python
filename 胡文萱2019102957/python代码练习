@@ -1,0 +1,30 @@
+import random
+def set1():
+  my_set1 = set()
+  for i in range(1000):
+      x=random.uniform(0,100)
+      my_set1.add(x)
+  for i in my_set1:
+     if (i >= 20 and i <= 50):
+         print(i)
+
+def set2():
+  all = 'abcgtjkilstipofhlllmmtuiadeagahuataaaytkttt'
+  st = ''
+  my_set2 = set()
+  for j in range(1000):
+     for i in range(0,5):
+         st += all[random.randint(0,len(all)-1)]
+     my_set2.add(st)
+     st=''
+  print(my_set2)
+  for i in my_set2:
+      if ('at' in i):
+          print(i)
+
+def main():
+  set1()
+  set2()
+
+main()
+
