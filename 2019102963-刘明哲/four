@@ -1,0 +1,89 @@
+##!/usr/bin/python3
+"""
+  Author:  Ming Zhe
+  Purpose: Function Example
+  Created: 4/20/2020
+"""
+import random
+import string
+
+def dataSampling(datatype, datarange, num, strlen): # 固定参数；可变参数arg*；默认参数；关键字参数**kwargs
+    '''
+    :Description: function...
+    :param datatype: input the type of data
+    :param datarange: input the range of data, a iterable data object
+    :param num: the number of data
+    :param strlen: the length of the data
+    :return: a set of sampling data
+    '''
+    try:
+        result = set()
+        for index in range(1, num):  # while(result.account == num)
+            if datatype is int:
+                it = iter(datarange)
+                item = random.randint(next(it), next(it))
+                result.add(item)
+                continue
+            elif datatype is float:
+                it = iter(datarange)
+                result.add(random.uniform(next(it), next(it)))
+                continue
+            elif datatype is str:
+                item = ''.join(random.SystemRandom().choice(datarange) for _ in range(strlen))
+                result.add(item)
+                continue
+            else:
+                pass
+    except:
+        if type(datarange) is not tuple:
+            print('error')
+        if datatype is (int or float):
+            if type(datarange[0] and datarange[1]) is not int:
+                print('datarange number error')
+        elif datatype is str:
+            if type(datarange) is not str:
+                print('datarange string error')
+        pass
+    finally:
+        return result
+
+
+
+def dataScreening(dataset, condition):
+    """
+        :param dataset: input the data
+        :param condition:Screening conditions 筛选条件
+        :return:result of process
+        """
+    try:
+        result = set()
+        for a in dataset:
+            if type(a) is float or type(a) is int:
+                if condition[0] <=a and condition[1]>=a:
+                    result.add(a)
+            else:
+                if condition[2] in a:
+                    result.add(a)
+    except:
+        if type(condition) is not tuple:
+            print('error')
+        else:
+            if type(condition[0] or condition[1]) is not (int or float):
+                print('datarange  number error')
+            elif type(condition[2]) is not str:
+                print('datarange string error')
+    finally:
+        return result
+
+
+def apply():
+    result1 = dataSampling(int, (1, 100), 10)
+    result2 = dataSampling(str, "igoahgnogjpoatatatat", 10)
+    print(result1)
+    print(result2)
+    Result1 = dataScreening(result1, (0, 50, "at"))
+    Result2 = dataScreening(result2, (0, 50, "at"))
+    print(Result1)
+    print(Result2)
+
+apply()
