@@ -1,0 +1,87 @@
+##!/usr/bin/python3
+"""
+  Author:  H.Wang
+  Purpose: Function Example
+  Created: 4/14/2020
+"""
+import random
+import string
+
+def dataSampling(datatype, datarange, num, len): # 固定参数；可变参数arg*；默认参数；关键字参数**kwargs
+    '''
+    :Description: function...
+    :param datatype: input the type of data
+    :param datarange: input the range of data, a iterable data object
+    :param num: the number of data
+    :return: a set of sampling data
+    '''
+    try:
+      result = set()
+      index = 1
+      while(index <= num):# while(result.account == num)
+         if datatype is int:
+             it = iter(datarange)   #（1,10）
+             item = random.randint(next(it), next(it))  # >=1 ,<10 randint(a, b ,c)
+             if item in result:
+                # print("重复",index)
+                 index = index -1
+             else:
+                 result.add(item)
+             index = index + 1
+             continue
+         elif datatype is float:
+             item=random.uniform(1, 10)
+             if item in result:
+                 index = index -1
+             else:
+                 result.add(item)
+             result.add(item)
+             index = index + 1
+             continue
+         elif datatype is str:
+             strlen = random.randint(1,len)
+             item = ''.join(random.SystemRandom().choice(datarange) for _ in range(strlen))
+             if item in result:
+                 index = index - 1
+             else:
+                 result.add(item)
+             result.add(item)
+             index = index + 1
+             continue
+         else:
+             pass
+      return result
+    except Exception as reason:
+       print('出错了T_T')
+       print('出错原因是'+str(reason))
+
+
+def dataScreening(dataset, datatype ,condition):
+     try:
+      result = set()
+      if datatype is int:
+          for i in dataset:
+              if((i >= condition[0]) and (i <= condition[1])):
+                  result.add(i)
+      elif datatype is str:
+          for i in dataset:
+              if len(i) == condition:
+                  result.add(i)
+      print(result)
+     except Exception as reason:
+       print('出错了T_T')
+       print('zhe出错原因是'+str(reason))
+
+def apply():
+    result1 = dataSampling(int, (1,100), 9,3)
+    print(result1)
+    dataScreening(result1, int, (0, 50))
+
+    result2 = dataSampling(str, "adfdgfbklllooasdtu", 9, 10)
+    print(result2)
+    dataScreening(result2, str, 6)
+
+    result3 = dataSampling(int,'adgrj',9,'34gh')
+    dataScreening(result3, str, 'sti')
+
+apply()
